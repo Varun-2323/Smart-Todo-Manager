@@ -5,23 +5,22 @@ A full-stack Todo Manager web application built using Django that helps users ef
 
 
 ##  Features
-
-- 👤 User Registration & Login
-- 🔐 Secure Authentication
-- ✏️ Edit User Profile
-- 📷 Upload / Remove Profile Picture
-- ➕ Add New Tasks
-- 📝 Edit Existing Tasks
-- ✅ Mark Tasks as Completed
-- ❌ Delete Tasks
-- 🔍 Search Tasks
-- 📂 Filter Pending & Completed Tasks
-- 🔔 Browser Reminder Notifications
-- 📱 Responsive User Interface
+- User Registration & Login
+- Secure Authentication
+- Edit User Profile
+- Upload / Remove Profile Picture
+- Add New Tasks
+- Edit Existing Tasks
+- Mark Tasks as Completed
+- Delete Tasks
+- Search Tasks
+- Filter Pending & Completed Tasks
+- Browser Reminder Notifications
+- Responsive User Interface
 
 ---
 
-## 🛠️ Technologies Used
+##  Technologies Used
 
 - Python
 - Django
@@ -32,7 +31,7 @@ A full-stack Todo Manager web application built using Django that helps users ef
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 Todo-Manager-Django/
@@ -48,7 +47,7 @@ Todo-Manager-Django/
 
 ---
 
-## ⚙️ Installation
+## Installation
 
 ### Clone the repository
 
@@ -102,7 +101,7 @@ http://127.0.0.1:8000/
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 ### Home Page
 
@@ -122,7 +121,7 @@ http://127.0.0.1:8000/
 ![Edit profile](./screenshots/EditProfilepage.JPG)
 
 
-## 🎯 Future Improvements
+## Future Improvements
 
 - Email Reminder Notifications
 - Task Categories
@@ -132,7 +131,7 @@ http://127.0.0.1:8000/
 
 ---
 
-## 👨‍💻 Author
+##  Author
 
 **Varun Padala**
 
@@ -141,5 +140,3 @@ GitHub: https://github.com/Varun-2323
 LinkedIn: https://www.linkedin.com/in/varun-padala-9b7a3430a/
 
 ---
-
-⭐ If you like this project, consider giving it a star!
