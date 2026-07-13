@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+
+Add Task
+
+{% endblock %}
+
+{% block css %}
+
+<link rel="stylesheet" href="{% static 'css/add_task.css' %}">
+
+{% endblock %}
+
+{% block content %}
+
+<div class="task-container">
+
+    <div class="task-box">
+
+        <h2>Add New Task</h2>
+
+        <form method="POST">
+
+            {% csrf_token %}
+
+            <label>Task Title</label>
+            <input type="text" name="title" required>
+
+            <label>Description</label>
+            <textarea name="description" rows="4" required></textarea>
+
+            <label>Priority</label>
+
+            <select name="priority">
+                <option value="High">High</option>
+                <option value="Medium" selected>Medium</option>
+                <option value="Low">Low</option>
+            </select>
+
+            <label>Reminder Date</label>
+            <input type="date" name="reminder_date" required>
+
+            <label>Reminder Time</label>
+            <input type="time" name="reminder_time" required>
+
+            <button type="submit">
+                Save Task
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+{% endblock %}

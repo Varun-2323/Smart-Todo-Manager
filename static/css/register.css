@@ -1,0 +1,119 @@
+.register-container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: calc(100vh - 80px);
+
+}
+
+.register-box {
+
+    width: 420px;
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 12px;
+
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+
+}
+
+.register-box h2 {
+
+    text-align: center;
+
+    margin-bottom: 25px;
+
+    color: #2563eb;
+
+}
+
+.register-box label {
+
+    display: block;
+
+    margin-top: 15px;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+
+}
+
+.register-box input {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 15px;
+
+}
+
+.register-box input:focus {
+
+    border: 2px solid #2563eb;
+
+}
+
+.register-box button {
+
+    width: 100%;
+
+    padding: 12px;
+
+    margin-top: 25px;
+
+    background: #2563eb;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 17px;
+
+}
+
+.register-box button:hover {
+
+    background: #1d4ed8;
+
+}
+
+.register-box p {
+
+    text-align: center;
+
+    margin-top: 20px;
+
+}
+
+.register-box a {
+
+    color: #2563eb;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+}
+
+.register-box a:hover {
+
+    text-decoration: underline;
+
+}

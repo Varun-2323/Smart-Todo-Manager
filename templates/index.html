@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="hero">
+
+    <h1>Welcome to Todo Manager</h1>
+
+    <p>Organize your daily tasks and boost your productivity.</p>
+
+    <a href="/login/">
+        <button>Get Started</button>
+    </a>
+
+</div>
+
+{% endblock %}

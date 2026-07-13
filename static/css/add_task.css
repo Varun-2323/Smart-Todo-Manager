@@ -1,0 +1,85 @@
+.task-box {
+    width: 500px;
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .15);
+}
+
+.task-box h2 {
+    text-align: center;
+    color: #2563eb;
+    margin-bottom: 25px;
+}
+
+.task-box label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.task-box input,
+.task-box textarea,
+.task-box select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.task-box button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 12px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.task-box button:hover {
+    background: #1d4ed8;
+}
+
+
+.edit-task-container{
+    width:100%;
+    min-height:80vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.edit-box{
+    width:500px;
+    background:white;
+    padding:35px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+.task-container{
+    width:100%;
+    min-height:80vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.task-box{
+    width:500px;
+    background:white;
+    padding:35px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+.task-box textarea,
+.task-box select,
+.task-box input{
+    width:100%;
+}

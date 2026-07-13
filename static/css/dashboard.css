@@ -1,0 +1,370 @@
+.dashboard {
+
+    width: 90%;
+    margin: 40px auto;
+
+}
+
+.dashboard h1 {
+
+    color: #222;
+    margin-bottom: 10px;
+
+}
+
+.dashboard p {
+
+    color: gray;
+    margin-bottom: 30px;
+
+}
+
+.cards {
+
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+
+}
+
+.card {
+    flex: 1;
+    height: 180px;
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, .2);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    white-space: nowrap;
+}
+
+.pending {
+
+    background: #f59e0b;
+
+}
+
+.completed {
+
+    background: #10b981;
+
+}
+
+.card h1 {
+
+    margin-top: 15px;
+    font-size: 45px;
+
+}
+
+.btn-section {
+
+    margin-bottom: 30px;
+
+}
+
+.btn-section button {
+
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+
+}
+
+.btn-section button:hover {
+
+    background: #1d4ed8;
+
+}
+
+.task-list {
+
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+
+}
+
+.task-list h2 {
+
+    margin-bottom: 20px;
+
+}
+
+table {
+
+    width: 100%;
+    border-collapse: collapse;
+
+}
+
+table th {
+
+    background: #2563eb;
+    color: white;
+    padding: 12px;
+
+}
+
+table td {
+
+    text-align: center;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+
+}
+
+.high {
+
+    color: red;
+    font-weight: bold;
+
+}
+
+.medium {
+
+    color: orange;
+    font-weight: bold;
+
+}
+
+.low {
+
+    color: green;
+    font-weight: bold;
+
+}
+
+.edit {
+
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 5px;
+
+}
+
+.delete {
+
+    background: red;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+
+}
+
+.edit:hover {
+
+    background: #1d4ed8;
+
+}
+
+.delete:hover {
+
+    background: #b91c1c;
+
+}
+
+
+.task-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.task-table th {
+    background: #2563eb;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+.task-table td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.task-table tr:hover {
+    background: #f5f8ff;
+}
+
+.edit-btn {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+.edit-btn:hover {
+    background: #1d4ed8;
+}
+
+.delete-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background: #b52a37;
+}
+
+.complete-btn {
+    background-color: #28a745 !important;
+    color: white !important;
+    border: none !important;
+    outline: none !important;
+    padding: 8px 15px !important;
+    border-radius: 6px !important;
+    cursor: pointer;
+    margin-right: 8px;
+    font-size: 14px;
+}
+
+.complete-btn:hover {
+    background-color: #218838 !important;
+}
+
+
+
+.card-link {
+    text-decoration: none;
+    flex: 1;
+    color: inherit;
+    display: block;
+}
+
+.card-link:hover {
+    text-decoration: none;
+}
+
+.card-link h1,
+.card-link h2 {
+    text-decoration: none;
+    color: white;
+}
+
+.active-card .card {
+    transform: scale(1.03);
+    border: 4px solid white;
+}
+.single-card{
+    display:flex;
+    justify-content:center;
+}
+
+.single-card .card{
+    width:350px;
+}
+.search-form{
+    display:flex;
+    gap:10px;
+    margin-top:20px;
+}
+
+.search-form input{
+    width:300px;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:6px;
+}
+
+.search-form button{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+.search-form button:hover{
+    background:#1d4ed8;
+}
+
+
+
+.profile-menu{
+    position: relative;
+    list-style: none;
+}
+
+.profile-pic{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid white;
+}
+
+.dropdown{
+    position: absolute;
+    top: 55px;
+    right: 0;
+    width: 230px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.2);
+    padding: 15px;
+    display: none;
+    z-index: 1000;
+}
+
+.dropdown h3{
+    color: #222;
+    margin-bottom: 5px;
+}
+
+.dropdown p{
+    color: gray;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.dropdown hr{
+    margin: 10px 0;
+}
+
+.dropdown a{
+    display: block;
+    text-decoration: none;
+    color: #222;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.dropdown a:hover{
+    background: #f1f5f9;
+}
+

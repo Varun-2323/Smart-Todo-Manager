@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Edit Profile
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/edit_profile.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="profile-container">
+
+    <div class="profile-box">
+
+        <h2>Edit Profile</h2>
+
+        <form method="POST" enctype="multipart/form-data">
+
+            {% csrf_token %}
+
+            <!-- Profile Picture -->
+            <div class="profile-image-section">
+
+                {% if profile.profile_image and profile.profile_image.name != "profile_pics/default.png" %}
+
+                <img src="{{ profile.profile_image.url }}" id="profileBtn" class="profile-pic">
+
+                {% else %}
+
+                <img src="{% static 'images/default.png' %}" id="profileBtn" class="profile-pic">
+
+                {% endif %}
+
+            </div>
+
+            <label>Profile Picture</label>
+            <input type="file" name="profile_image">
+
+            <div class="remove-picture">
+                <input type="checkbox" id="remove_picture" name="remove_picture">
+                <label for="remove_picture">Remove Current Picture</label>
+            </div>
+
+            <label>Username</label>
+            <input type="text" name="username" value="{{ request.user.username }}" required>
+
+            <label>Email</label>
+            <input type="email" name="email" value="{{ request.user.email }}" required>
+
+            <button type="submit">
+                Save Changes
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock %}

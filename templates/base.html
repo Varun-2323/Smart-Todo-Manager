@@ -1,0 +1,179 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}Todo Manager{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+    {% block css %}
+    {% endblock %}
+</head>
+
+<body>
+
+    <nav>
+
+        <div class="logo">
+            📝 Todo Manager
+        </div>
+
+        <ul>
+
+            {% if user.is_authenticated %}
+            <li><a href="{% url 'dashboard' %}">Home</a></li>
+            {% else %}
+            <li><a href="{% url 'login' %}">Home</a></li>
+            {% endif %}
+
+            {% if user.is_authenticated %}
+
+            <li class="profile-menu">
+
+                {% load static %}
+
+                {% if profile.profile_image and profile.profile_image.name != "profile_pics/default.png" %}
+
+                <img src="{{ profile.profile_image.url }}" id="profileBtn" class="profile-pic" alt="Profile">
+
+                {% else %}
+
+                <img src="{% static 'images/default.png' %}" id="profileBtn" class="profile-pic" alt="Profile">
+
+                {% endif %}
+
+                <div class="dropdown" id="dropdownMenu">
+
+                    <h3>{{ user.username }}</h3>
+
+                    <p>{{ user.email }}</p>
+
+                    <hr>
+
+                    <a href="{% url 'edit_profile' %}">Edit Profile</a>
+
+                    <a href="{% url 'logout' %}">Logout</a>
+
+                </div>
+
+            </li>
+
+            {% else %}
+
+            <li><a href="{% url 'login' %}">Login</a></li>
+            <li><a href="{% url 'register' %}">Register</a></li>
+
+            {% endif %}
+
+        </ul>
+
+    </nav>
+
+    <div class="container">
+
+        {% block content %}
+        {% endblock %}
+
+    </div>
+
+    {% if messages %}
+    <div class="messages">
+
+        {% for message in messages %}
+
+        <div class="alert {{ message.tags }}">
+            {{ message }}
+        </div>
+
+        {% endfor %}
+
+    </div>
+    {% endif %}
+
+    <script>
+
+        const profileBtn = document.getElementById("profileBtn");
+        const dropdown = document.getElementById("dropdownMenu");
+
+        if (profileBtn && dropdown) {
+
+            profileBtn.addEventListener("click", function (e) {
+
+                e.stopPropagation();
+
+                if (dropdown.style.display === "block") {
+                    dropdown.style.display = "none";
+                }
+                else {
+                    dropdown.style.display = "block";
+                }
+
+            });
+
+            document.addEventListener("click", function () {
+
+                dropdown.style.display = "none";
+
+            });
+
+        }
+
+        setTimeout(function () {
+
+            const messages = document.querySelector(".messages");
+
+            if (messages) {
+
+                messages.style.display = "none";
+
+            }
+
+        }, 2000);
+
+    </script>
+    <script>
+
+        if ("Notification" in window) {
+
+            if (Notification.permission !== "granted") {
+
+                Notification.requestPermission();
+
+            }
+
+        }
+
+    </script>
+    <script>
+
+        function saveScroll() {
+            localStorage.setItem("scrollPosition", window.scrollY);
+        }
+        window.addEventListener("load", function () {
+
+            const scroll = localStorage.getItem("scrollPosition");
+
+            if (scroll) {
+
+                setTimeout(function () {
+
+                    window.scrollTo(0, parseInt(scroll));
+
+                    localStorage.removeItem("scrollPosition");
+
+                }, 100);
+
+            }
+
+        });
+
+    </script>
+</body>
+
+</html>
